@@ -4,6 +4,7 @@ import json
 import hashlib
 import time
 import datetime
+import random
 import sys
 
 
@@ -81,6 +82,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     step = sys.argv[3]
+    step = random.randint(9000,12000)
     try:
         # 修改步数结果
         result = LexinSport(str(username), str(password), int(step)).change_step()
